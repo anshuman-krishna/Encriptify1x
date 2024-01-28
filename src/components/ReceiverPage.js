@@ -1,6 +1,6 @@
 import React from 'react';
-import backgroundImg from './images/sender.jpg';
-import Footer from './components/shared/Footer';
+import backgroundImg from '../images/sender.jpg';
+import Footer from '../components/shared/Footer';
 
 const SenderPage = () => {
   return (

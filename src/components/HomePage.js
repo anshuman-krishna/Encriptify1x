@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from './components/shared/Button';
-import InputField from './components/shared/InputField';
+import Button from '../components/shared/Button'
+import InputField from '../components/shared/InputField';
 
 const MyComponent = () => {
   const handleClick = () => {

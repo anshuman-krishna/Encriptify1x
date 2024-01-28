@@ -1,21 +1,26 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import SenderPage from './components/SenderPage';
 import ReceiverPage from './components/ReceiverPage';
 
+const router=createBrowserRouter([{
+  path:"/",
+  element:<HomePage/>
+},
+ { path:"sender",
+    element:<SenderPage/>
+},
+{
+  path:"receiver",
+  element:<ReceiverPage/>
+}
+])
+
+
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact>
-          <Redirect to="/sender" />
-        </Route>
-        <Route path="/sender" component={SenderPage} />
-        <Route path="/receiver" component={ReceiverPage} />
-        <Route path="/home" component={HomePage} />
-      </Switch>
-    </Router>
+    <RouterProvider router={router}/>
   );
 }
 
